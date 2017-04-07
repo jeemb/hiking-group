@@ -1,0 +1,33 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Member</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Member Name:</label>
+        <br>
+        <input #newName>
+      </div>
+
+      <div>
+        <label>Member Age:</label>
+        <br>
+        <input #newAge>
+      </div>
+
+      <div>
+        <label>Member Type:</label>
+        <br>
+        <input #newType>
+      </div>
+
+      <div>
+        <label>Years with Group:</label>
+        <br>
+        <input #newYears>
+      </div>
+      <button (click)="submitForm(newName.value, newAge.value, newType.value, newYears.value); newName.value=''; newAge.value=''; newType.value=''; newYears.value=''">Add</button>
+    </div>
+  </div>
+</div>
