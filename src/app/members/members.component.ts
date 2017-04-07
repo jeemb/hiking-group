@@ -16,9 +16,9 @@ export class MembersComponent implements OnInit{
 
   constructor(private router: Router, private memberService: MemberService){}
 
-  goToDetailPage(clickedMember: Member) {
-   this.router.navigate(['members', clickedMember.id]);
- }
+  goToDetailPage(clickedMember) {
+   this.router.navigate(['members', clickedMember.$key]);
+ };
 
  ngOnInit() {
    this.members = this.memberService.getMembers();

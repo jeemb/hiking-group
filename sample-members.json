@@ -2,19 +2,16 @@
     "name": "John",
     "age": "32",
     "type": "general",
-    "years": "1",
     "id": "1"
     }, {
       "name": "Mae",
       "age": "22",
       "type": "general",
-      "years": "3",
       "id": "2"
       }, {
         "name": "Jake",
         "age": "30",
         "type": "expert",
-        "years": "2",
         "id": "3"
   }]
 }

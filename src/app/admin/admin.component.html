@@ -22,12 +22,11 @@
         <input #newType>
       </div>
 
-      <div>
-        <label>Years with Group:</label>
-        <br>
-        <input #newYears>
-      </div>
-      <button (click)="submitForm(newName.value, newAge.value, newType.value, newYears.value); newName.value=''; newAge.value=''; newType.value=''; newYears.value=''">Add</button>
+      <button (click)="submitForm(newName.value, newAge.value, newType.value); newName.value=''; newAge.value=''; newType.value=''">Add</button>
     </div>
   </div>
+</div>
+
+<div>
+  <app-members></app-members>
 </div>
