@@ -1,6 +1,9 @@
 <h2>Members</h2>
 
-<div *ngFor="let member of members | async" class="panel panel-default">
+<button (click)="setSortValue($event.target.value)" value="low">Names: A-M</button>
+<button (click)="setSortValue($event.target.value)" value="high">Names: N-Z</button>
+
+<div *ngFor="let member of members | async | name:sortValue" class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(member)"><em>{{member.name}}</em> --- {{member.type}}</h3>
     <div *ngIf="currentRoute === '/admin'">
