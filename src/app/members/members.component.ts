@@ -1,26 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Member } from './../member.model';
 import { Router } from '@angular/router';
+import { MemberService } from '../member.service';
 
 @Component({
   selector: 'app-members',
   templateUrl: './members.component.html',
-  styleUrls: ['./members.component.css']
+  styleUrls: ['./members.component.css'],
+  providers: [MemberService]
 })
-export class MembersComponent {
 
-  constructor(private router: Router){}
-  
-  members: Member[] = [
-   new Member("Jamie", 24,
-       "general", 3, 1),
-   new Member("John", 32,
-       "general", 1, 2),
-   new Member("Moose", 9,
-       "expert", 6, 3)
- ];
+export class MembersComponent implements OnInit{
+  members: Member[];
 
- goToDetailPage(clickedMember: Member) {
+  constructor(private router: Router, private memberService: MemberService){}
+
+  goToDetailPage(clickedMember: Member) {
    this.router.navigate(['members', clickedMember.id]);
+ }
+
+ ngOnInit() {
+   this.members = this.memberService.getMembers();
  }
 }
