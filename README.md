@@ -4,6 +4,15 @@
 
 #### By Jennifer Beem
 
+### Setup Instructions
+* Clone this repo
+* `cd <this repo>`
+* `npm install`
+* `bower install`
+* Create api-key file and input info
+* Navigate to localhost:4200
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Development server
